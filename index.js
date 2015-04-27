@@ -17,7 +17,10 @@ io.on("connection", function(socket) {
 	});
 });
 
-var port = 3000;
+
+var port;
+
+if(process.argv[2]) {port = process.argv[2]} else {port = 3000}
 
 http.listen(port, function() {
 	console.log("chat listening on port " + port + ".");
