@@ -1,18 +1,35 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install' ]
-2 info using npm@1.4.28
-3 info using node@v0.10.38
-4 verbose node symlink /usr/bin/node
-5 error install Couldn't read dependencies
-6 error package.json ENOENT, open '/var/www/html/ChatterBox/package.json'
-6 error package.json This is most likely not a problem with npm itself.
-6 error package.json npm can't find a package.json file in your current directory.
-7 error System Linux 3.13.0-34-generic
-8 error command "/usr/bin/node" "/usr/bin/npm" "install"
-9 error cwd /var/www/html/ChatterBox
-10 error node -v v0.10.38
-11 error npm -v 1.4.28
-12 error path /var/www/html/ChatterBox/package.json
-13 error code ENOPACKAGEJSON
-14 error errno 34
-15 verbose exit [ 34, true ]
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'start' ]
+2 info using npm@2.7.4
+3 info using node@v0.12.2
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info prestart ChatterBox@1.0.0
+6 info start ChatterBox@1.0.0
+7 verbose unsafe-perm in lifecycle true
+8 info ChatterBox@1.0.0 Failed to exec start script
+9 verbose stack Error: ChatterBox@1.0.0 start: `node index.js`
+9 verbose stack Exit status 1
+9 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:213:16)
+9 verbose stack     at EventEmitter.emit (events.js:110:17)
+9 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:14:12)
+9 verbose stack     at ChildProcess.emit (events.js:110:17)
+9 verbose stack     at maybeClose (child_process.js:1015:16)
+9 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1087:5)
+10 verbose pkgid ChatterBox@1.0.0
+11 verbose cwd /home/monty/Code/Node.js/ChatterBox
+12 error Linux 3.19.0-15-generic
+13 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "start"
+14 error node v0.12.2
+15 error npm  v2.7.4
+16 error code ELIFECYCLE
+17 error ChatterBox@1.0.0 start: `node index.js`
+17 error Exit status 1
+18 error Failed at the ChatterBox@1.0.0 start script 'node index.js'.
+18 error This is most likely a problem with the ChatterBox package,
+18 error not with npm itself.
+18 error Tell the author that this fails on your system:
+18 error     node index.js
+18 error You can get their info via:
+18 error     npm owner ls ChatterBox
+18 error There is likely additional logging output above.
+19 verbose exit [ 1, true ]

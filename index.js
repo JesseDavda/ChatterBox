@@ -1,7 +1,7 @@
 var express = require("express"),
 	app = express(),
 	http = require("http").Server(app),
-	io = require("socket.io")(http),
+	io = require("socket.io")(http);
 	     
 var ipAddress = process.env.OPENSHIFT_INTERNAL_IP || process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
 var port = process.env.OPENSHIFT_INTERNAL_IP || process.env.OPENSHIFT_NODEJS_PORT || process.argv[2] || 3030;
