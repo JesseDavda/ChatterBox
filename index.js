@@ -8,6 +8,8 @@ var port = process.env.OPENSHIFT_INTERNAL_IP || process.env.OPENSHIFT_NODEJS_POR
 
 
 app.use(express.static("static"));
+app.use(express.static("node_modules/materialize-css"));
+app.use(express.static("node_modules/dist/jquery.min.js"));
 
 io.on("connection", function(socket) {
 	console.log("a user connnected");
