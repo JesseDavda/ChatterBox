@@ -1,12 +1,11 @@
 var socket = io();
 
-var username = "curly cheese ass";
 
 $("form").submit(function() {
-	socket.emit("chat message", $("#m").val());
+	socket.emit("chat message", {m: $("#m").val(), u: $("#u").val()});
 	$("#m").val("");
 	return false;
 });
 socket.on("chat message", function(msg) {
-	$("#messages").append($("<li>" + username).text(msg));
+	$("#messages").append($("<li>").text(msg.u + ":" + msg.m));
 });
