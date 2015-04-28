@@ -5,6 +5,7 @@ var express = require("express"),
 	     
 var ipAddress = process.env.OPENSHIFT_INTERNAL_IP || process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
 var port = process.env.OPENSHIFT_INTERNAL_IP || process.env.OPENSHIFT_NODEJS_PORT || process.argv[2] || 3030;
+var numOfMessages = 0;
 
 app.use(express.static("static"));
 app.use("/", express.static("node_modules/materialize-css"));
